@@ -28,6 +28,21 @@ st.title(title)
 # Allow cache
 #@st.cache(allow_output_mutation=True)
 
+# Set the logo
+st.sidebar.markdown(
+        """
+        <style>
+            [data-testid="stSidebarNav"] {
+                background-image: url(https://lh3.googleusercontent.com/eRZ62FDqGZphgSBxSlibMF-6aNpRCIVslttJJLlsVbyECA6wVcT-KEtZOQ-FfY0VVzIFznTvTXK3eHYd7gjtfXQ1OZnd1z1pM81BiDjit_I7tqp93f7qzASs6I8tmMKkgtVhqjgktrk=w2400);
+                background-repeat: no-repeat;
+                padding-top: 2px;
+                background-position: 20px 30px;
+            }
+        </style>
+        """,
+        unsafe_allow_html=True,
+)
+
 # Set description
 st.write("First of all, welcome! This is the place where you can input your spendings and our system \
         will recommend a credit card that best suits you. Try it now and optimise your savings every month!")
@@ -53,7 +68,7 @@ ques_11_options_v2 = ['', 'Not available for cashback cards', 'Krisflyer', 'Asia
                     'British Airways Executive Club', 'Etihad Guest', 'Turkish Miles and Smiles']
 
 # Set the input parameters
-with st.sidebar:
+with st.sidebar.form(key = 'Form_1'):
     ques_1 = st.selectbox(
         'Do you prefer a miles or cashback card?',
         ques_1_options
@@ -104,6 +119,8 @@ with st.sidebar:
             'Which is your preferred travel partner?',
             ques_11_options_v2)
     st.write("")
+
+    st.form_submit_button("Submit")
 
 # Saving the input as a dataframe
 def user_input():
