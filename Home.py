@@ -19,7 +19,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # Set Page Title
-st.set_page_config(page_title="Home Page", layout="wide")
+st.set_page_config(page_title="Home", layout="wide")
 
 # Set the title
 title = "Welcome to KEYCARDS!"
