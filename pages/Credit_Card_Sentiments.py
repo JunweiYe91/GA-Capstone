@@ -199,7 +199,7 @@ with st.container():
         # Display outputs
         st.image(card_image)
         st.write("")
-        st.write("**Net Promoter Score:** " + str(card_nps) + " /100")
+        st.write("**Net Promoter Score:** " + str(card_nps))
         st.write("**Number of reviews:** " + str(card_reviews_no))
 
 
