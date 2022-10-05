@@ -30,8 +30,9 @@ st.sidebar.markdown(
         """
         <style>
             [data-testid="stSidebarNav"] {
-                background-image: url(https://lh3.googleusercontent.com/eRZ62FDqGZphgSBxSlibMF-6aNpRCIVslttJJLlsVbyECA6wVcT-KEtZOQ-FfY0VVzIFznTvTXK3eHYd7gjtfXQ1OZnd1z1pM81BiDjit_I7tqp93f7qzASs6I8tmMKkgtVhqjgktrk=w2400);
+                background-image: url(https://keycards.herokuapp.com/media/2a12f60e3ce1cf799cc4dbf2266d4ea295ad072fa304131800d2a345.png);
                 background-repeat: no-repeat;
+                background-size: 250px 49px;
                 padding-top: 2px;
                 background-position: 20px 30px;
             }
@@ -215,3 +216,10 @@ with st.container():
         st.write(card_sentiments)
     else:
         st.write(card_sentiments[card_sentiments['sentiment'] == int(filter_sentiment)])
+
+# sidebar contents
+st.sidebar.image(Image.open('image/logo/logo.png'))
+st.sidebar.write("For Careers/Business Opportunity, please contact me at:")
+st.sidebar.write("**Email:** junwei.ye.sg@gmail.com")
+st.sidebar.write("**Linkedin:** https://www.linkedin.com/in/ye-junwei/")
+st.sidebar.write("**Github:** https://github.com/JunweiYe91/GA-Projects")
