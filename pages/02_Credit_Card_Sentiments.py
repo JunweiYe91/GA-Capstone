@@ -25,22 +25,6 @@ st.set_page_config(page_title="Credit Card Sentiments", layout="wide")
 title = "Credit Card Sentiments"
 st.title(title)
 
-# Set the logo
-st.sidebar.markdown(
-        """
-        <style>
-            [data-testid="stSidebarNav"] {
-                background-image: url(https://keycards.herokuapp.com/media/2a12f60e3ce1cf799cc4dbf2266d4ea295ad072fa304131800d2a345.png);
-                background-repeat: no-repeat;
-                background-size: 250px 49px;
-                padding-top: 2px;
-                background-position: 20px 30px;
-            }
-        </style>
-        """,
-        unsafe_allow_html=True,
-)
-
 # Set description
 st.write("First of all, welcome! This is the place where you can check out the sentiments and reviews of each card. Feel free to check it out!")
 st.markdown("##")
